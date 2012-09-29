@@ -1,10 +1,9 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
-
-<% if @profiles && @profiles["facebook"] %>
-  <pre><%= @profiles["facebook"].inspect %></pre>
+<h1>Blackmail for friends</h1>
+<p>
+<% if @profiles %>
+  <pre><%= @profiles.inspect %></pre>
   <%= link_to "Logout", "/logout" %>
 <% else %>
   <%= link_to "Login with Facebook", "/auth/singly?service=facebook" %>
 <% end %>
+</p>
