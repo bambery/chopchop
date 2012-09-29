@@ -1,4 +1,5 @@
 class Blackmail < ActiveRecord::Base
+  validates :hustler_id, :victim_id, :video_url
   validate :hustler_is_not_victim
 
   belongs_to  :hustler,
