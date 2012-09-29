@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sender: 
+  recipient: 
+  note: MyText
+  deadline: 2012-09-29 15:38:16
+  video_url: MyString
+
+two:
+  sender: 
+  recipient: 
+  note: MyText
+  deadline: 2012-09-29 15:38:16
+  video_url: MyString
