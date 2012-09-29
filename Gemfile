@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'httparty'
 gem 'omniauth-singly', :git => "git://github.com/Singly/omniauth-singly.git"
+gem 'devise'
 
 group :assets do
   gem 'haml'
