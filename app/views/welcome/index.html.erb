@@ -1,7 +1,7 @@
 <h1>Blackmail for friends</h1>
 <p>
-<% if @profiles %>
-  <pre><%= @profiles.inspect %></pre>
+<% unless @current_user.nil? %>
+  <pre><%= @current_user.inspect %></pre>
   <%= link_to "Logout", "/logout" %>
 <% else %>
   <%= link_to "Login with Facebook", "/auth/singly?service=facebook" %>

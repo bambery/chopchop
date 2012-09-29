@@ -1,11 +1,13 @@
 class WelcomeController < ApplicationController
   def index
     if access_token
-      @profiles = HTTParty.get(facebook_self,
+      @facebook_self = HTTParty.get(facebook_self,
         :query => {
           :access_token => access_token
         }
       ).parsed_response
+
+      @current_user = User.find_for_facebook(@facebook_self)
     end
   end
 
