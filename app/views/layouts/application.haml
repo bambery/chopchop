@@ -8,7 +8,6 @@
   %body
     .container
       .main-body
-        = render 'layouts/header'
         - flash.each do |key, value| 
           %div.alert-message{:id => "flash#{key}"}= value
         = yield

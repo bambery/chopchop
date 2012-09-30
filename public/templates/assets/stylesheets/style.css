@@ -1,0 +1,107 @@
+/*@media (max-width: 480) {*/
+
+	body {
+		font-family: sans-serif;
+		padding: 6.5em 0 2em 0;
+	}
+	
+	#page {
+		padding: 0;
+		width: 100%;
+	}
+	
+	#page header {
+		background: #fff;
+		border-bottom: 1px solid #999;
+		left: 0;
+		margin: 0;
+		padding: 0.75em;
+		position: fixed;
+		text-align: center;
+		top: 0;
+		width: 100%;
+	}
+	
+	#page header h1 {
+		font-size: 1.75em;
+	}
+	
+	#page nav {
+	}
+	
+	#page nav ul {
+		margin: 0 auto;
+	}
+	
+	#page nav ul li {
+	}
+	
+	#page h1 {
+		margin: 0 auto;
+	}
+	
+	#welcome {
+		margin: 2em auto;
+		text-align: left;
+		width: 80%;
+	}
+	
+	#fb-login {
+		margin: inherit auto;
+	}
+	
+	.victim-list-item {
+		border: 1px solid #999;
+		display: block;
+		padding: .5em;
+		width: 100%;
+	}
+	
+	.victim-list-item h2 {
+		display: inline-block;
+		font-size: 1.5em;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.victim-list-item p {
+		display: inline-block;
+		padding: 0;
+	}
+	
+	.victim-list-item .victim-timer {
+		display: block;
+		float: right;
+		font-size: 3.25em;
+		margin: 0.5em 0 0 0;
+		padding: 0;
+	}
+
+	#victim-form form fieldset {
+		background: #585858;
+		display: none;
+		margin: 0.5em 0;
+		padding: 0.75em;
+	}
+
+	#victim-form form fieldset label {
+		color: #fff;
+	}
+	
+	.blackmail-form-btn {
+		display: block;
+		margin: 0 0 1em 0;
+	}
+	
+	.form-cancel {
+		margin: 0 0.5em;
+	}
+	
+	.form-done {
+		margin: 0 0.5em 0 0;
+	}
+	
+	.form-note {
+		font-size: 0.75em;
+	}
+/*}*/

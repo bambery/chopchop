@@ -1,3 +1,15 @@
+.container-fluid
+  #page.row-fluid
+    .span12
+      %header
+        %h1 Blackmail
+        %nav.navbar.navbar-fixed-bottom.navbar-inverse
+          .navbar-inner
+            %ul.nav
+              %li.divider-vertical #{link_to "Your Victims", user_blackmails_path(@user)}
+              %li.active.divider-vertical #{link_to "Blackmail", "#"}
+              %li.divider-vertical #{link_to "FAQ", faq_path}
+
 %h1 new blackmail
 
 = simple_form_for([@user,@blackmail], :html => {:class => 'form-horizontal', :multipart => true}) do |b|

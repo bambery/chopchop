@@ -4,10 +4,10 @@ Chopchop::Application.routes.draw do
   match "logout"                 => "auth#logout"
   
   root :to => 'welcome#index'
+  match "faq" => "pages#faq"
 
   resources :users do
     resources :blackmails
   end
 
-  match "faq" => "pages#faq"
 end
