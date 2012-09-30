@@ -9,4 +9,5 @@ Chopchop::Application.routes.draw do
     resources :blackmails
   end
 
+  match "faq" => "pages#faq"
 end
