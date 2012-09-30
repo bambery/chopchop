@@ -1,5 +1,8 @@
 class Blackmail < ActiveRecord::Base
-  #validates :hustler_id, :victim_id, :video_url
+  validates :hustler_id, :victim_id, :amount,
+            :presence => true
+  validates :amount, :numericality =>{:less_than_or_equal_to => 15.00}
+
   #validate :hustler_is_not_victim
 
   belongs_to  :hustler,

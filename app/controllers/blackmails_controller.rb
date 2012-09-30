@@ -34,6 +34,7 @@ class BlackmailsController < ApplicationController
       redirect_to user_blackmail_path(@user, @blackmail)
     else
       flash[:error] = "no"
+      render 'new'
     end
   end
 
