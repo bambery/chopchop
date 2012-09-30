@@ -1,0 +1,8 @@
+%h1.welcome_name Hello #{@user.name}
+%h2.quippy_text Ready to make someone pay?
+
+%ul
+  %li= link_to "blackmail someone new", new_user_blackmail_path(@user)
+  -if @user.is_blackmailing?
+    %li= link_to "check on your blackmails"
+

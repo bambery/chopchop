@@ -1,5 +1,16 @@
 class User < ActiveRecord::Base
   devise :omniauthable
+  validates :name, :email,
+            :presence => true
+
+  has_many  :outgoing_blackmails,
+            :foreign_key => :hustler_id,
+            :class_name => 'Blackmail'
+
+  has_many  :incoming_blackmails,
+            :foreign_key => :victim_id,
+            :class_name => "Blackmail"
+
 
   attr_accessible :email, :facebook_id, :name
 
@@ -14,5 +25,9 @@ class User < ActiveRecord::Base
         )
       end
     user
+  end
+
+  def is_blackmailing?
+    Blackmail.find_by_hustler_id(self.id)
   end
 end

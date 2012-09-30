@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120929222824) do
 
   create_table "blackmails", :force => true do |t|
-    t.integer  "hustler"
+    t.integer  "hustler_id"
     t.integer  "victim_id"
     t.text     "note"
     t.datetime "deadline"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20120929222824) do
     t.integer  "status_cd"
   end
 
-  add_index "blackmails", ["hustler"], :name => "index_blackmails_on_sender_id"
+  add_index "blackmails", ["hustler_id"], :name => "index_blackmails_on_sender_id"
   add_index "blackmails", ["victim_id"], :name => "index_blackmails_on_recipient_id"
 
   create_table "users", :force => true do |t|

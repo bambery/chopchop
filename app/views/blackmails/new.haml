@@ -1,0 +1,9 @@
+%h1 new blackmail
+
+= simple_form_for([@user,@blackmail], :html => {:class => 'form-horizontal'}) do |b|
+  =simple_fields_for @victim do |v|
+    =v.input :name, :label => "Victim name:", :as => :string
+    =v.input :email, :label => "Victim email", :as => :string
+  =b.input :note, :input_html => {:rows => 5}, :label => "your blackmail message"
+  =b.input :amount, :label => "how much do you want?", :hint => "only up to $15" 
+  =b.button :submit
