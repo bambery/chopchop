@@ -9,5 +9,4 @@ Chopchop::Application.routes.draw do
     resources :blackmails
   end
 
-#  resources :blackmails, :only => [:create, :destroy]
 end

@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
       ).parsed_response
 
       @current_user = User.find_for_facebook(@facebook_self)
+      redirect_to user_path(@current_user) 
     end
   end
 
