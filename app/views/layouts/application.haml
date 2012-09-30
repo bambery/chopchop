@@ -1,0 +1,14 @@
+!!! 5
+%html
+  %head
+    %title=@title 
+    = csrf_meta_tags 
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
+  %body
+    .container
+      .main-body
+        = render 'layouts/header'
+        - flash.each do |key, value| 
+          %div.alert-message{:id => "flash#{key}"}= value
+        = yield
