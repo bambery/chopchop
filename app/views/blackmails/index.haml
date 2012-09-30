@@ -1,0 +1,3 @@
+%ul.blackmail_list
+  - @blackmails.each do |blackmail|
+    %li= link_to "#{blackmail.victim_name} for $#{blackmail.amount}", user_blackmail_path(@user, blackmail)

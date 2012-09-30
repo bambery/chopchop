@@ -27,7 +27,6 @@ class BlackmailsController < ApplicationController
       :email => params[:user][:email]
     )
     end
-#    @blackmail = @user.outgoing_blackmails.build(params[:blackmail], :victim_id => @victim.id)
     @blackmail = @user.outgoing_blackmails.build(params[:blackmail].merge({:victim_id =>@victim.id}) )
     if @blackmail.save
       flash[:success] = "yay"
@@ -35,6 +34,13 @@ class BlackmailsController < ApplicationController
     else
       flash[:error] = "no"
       render 'new'
+    end
+  end
+
+  def index
+    @blackmails = Blackmail.scoped
+    if params[:user_id]
+      @blackmails = User.find(params[:user_id]).outgoing_blackmails
     end
   end
 

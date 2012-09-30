@@ -3,5 +3,5 @@
 %h4 note: #{@blackmail.note}
 %h4 I demand $#{@blackmail.amount}
 %h4 or else I will release this video: (embed video here)
-%h4 you may pay me here:
+= link_to 'pay me here or live in embarassment', "#{@blackmail.generate_venmo_link}"
 
