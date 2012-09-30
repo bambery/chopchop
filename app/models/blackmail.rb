@@ -32,4 +32,8 @@ class Blackmail < ActiveRecord::Base
     User.find(self.hustler_id).name
   end
 
+#  def generate_venmo_link
+#    "https://venmo.com?txn=Charge&recipients=`
+#  end
+
 end
