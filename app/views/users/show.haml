@@ -4,5 +4,5 @@
 %ul
   %li= link_to "blackmail someone new", new_user_blackmail_path(@user)
   -if @user.is_blackmailing?
-    %li= link_to "check on your blackmails"
+    %li= link_to "check on your blackmails", user_blackmails_path(@user)
 
