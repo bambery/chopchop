@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+	<head>
+		<title>Blackmail</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div id="page" class="row-fluid">
+				<div class="span12">
+
+					<header>
+						<h1>Blackmail</h1>
+					</header>
+
+					<nav class="navbar navbar-fixed-bottom navbar-inverse">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li "divider-vertical">
+									<a href="victims.html">Your Victims</a>
+								</li>
+								<li class="active" class="divider-vertical">
+									<a href="blackmail.html">Blackmail</a>
+								</li>
+								<li class="divider-vertical">
+									<a href="#">Settings</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<div id="victim-form">
+						<form>
+							<button class="btn blackmail-form-btn" id="blackmail-btn">Your Victim&rsquo;s Info</button>
+							<fieldset id="victim-info-grp">
+								<label for="victim-name">Victim&rsquo;s Name</label>
+								<input type="text" size="128" id="victim-name" name="victim-name">
+
+								<label for="victim-email">Victim&rsquo;s Email</label>
+								<input type="text" size="128" id="victim-email" name="victim-email">
+
+								<button class="btn btn-small form-done" id="victim-info-done">Done</button>
+								<a href="#" class="form-cancel" id="victim-info-cancel">Cancel</a>
+							</fieldset>
+
+							<button class="btn blackmail-form-btn" id="message-btn">Your Blackmail Message</button>
+							<fieldset id="message-grp">
+								<textarea id="blackmail-message" name="blackmail-message"></textarea>
+
+								<button class="btn btn-small form-done" id="message-done">Done</button>
+								<a href="#" class="form-cancel" id="message-cancel">Cancel</a>
+							</fieldset>
+
+							<button class="btn blackmail-form-btn" id="ransom-btn">Ransom &amp; Deadline</button>
+							<fieldset id="ransom-grp">
+								<label for="victim-ransom">Amount</label>
+								$ <input type="number" maxlength="2" width="2" size="2" min="1" max="15" id="victim-ransom">
+								<label for="victim-deadline">Deadline</label>
+								<input type="date" maxlength="2" width="2" size="2" min="1" max="15" id="victim-ransom">
+
+								<button class="btn btn-small form-done" id="ransom-done">Done</button>
+								<a href="#" class="form-cancel" id="ransom-cancel">Cancel</a>
+							</fieldset>
+
+							<button class="btn blackmail-form-btn" id="video-btn">Add a Video</button>
+							<fieldset id="video-grp">
+								<input type="file" id="victim-video">
+								<p class="form-note">Videos must be no longer than 15 seconds. Longer videos will be cut after 15 seconds</p>
+
+								<button class="btn btn-small form-done" id="video-done">Extort!</button>
+								<a href="#" class="form-cancel" id="video-cancel">Cancel</a>
+							</fieldset>
+						</form>
+					</div>
+
+				</div><!-- span12 -->
+			</div><!-- page -->
+		</div><!-- container -->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/interactions.js"></script>
+	</body>
+</html>
